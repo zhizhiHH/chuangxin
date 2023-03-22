@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>Web留言板</title>
+  <meta charset="utf-8">
+</head>
+
+<body>
+  <h1>Web留言板</h1>
+
+  <!-- 留言列表 -->
+  <ul>
+    {% for message in messages %}
+    <li>{{ message }}</li>
+    {% endfor %}
+  </ul>
+
+  <hr>
+
+  <!-- 留言表单 -->
+  <form method="POST" action="/">
+    <label>留言:</label><br>
+    <textarea name="message"></textarea><br>
+    <input type="submit" value="提交">
+  </form>
+
+</body>
+
+</html>
